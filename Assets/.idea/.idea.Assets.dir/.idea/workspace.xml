@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6f7710ca-d219-4d30-98c0-481e4aea9935" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scenes/PlatformerTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Scenes/PlatformerTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SwordScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SwordScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/metadata/79/793c6fec2dafb4f3da1eb7cc9c09eb6c" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/metadata/79/793c6fec2dafb4f3da1eb7cc9c09eb6c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Library/shadercompiler-UnityShaderCompiler0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Library/shadercompiler-UnityShaderCompiler0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-187d52c72ebe6498d944aea9ddebaf3e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-78ba19752ea5240d9bd47bb23103bbe6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-89ec2c756c5804c91b7b0587a792794c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-8d075191dacc9410d89a15f2c1ff284a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-b44e191255175471c971abf06e9508cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-c7cc43352cd2546f8ac5377c27d52b3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/UnityTempFile-e8cad9867dc244f268c116092286670b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/../Temp/__Backupscenes/0.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/tempFile.res" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Temp/tempFile.resG" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/SwordScript.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectId" id="1Vel0wesPTsh5N9zxBwMEUJDiV9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.4" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../PlatformerTest.sln" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6f7710ca-d219-4d30-98c0-481e4aea9935" name="Default Changelist" comment="" />
+      <created>1577621222653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577621222653</updated>
+      <workItem from="1577621231102" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="WindowStateProjectService">
+    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl" timestamp="1577621269923">
+      <screen x="70" y="27" width="1296" height="741" />
+    </state>
+    <state x="501" y="155" width="424" height="491" key="FileChooserDialogImpl/70.27.1296.741@70.27.1296.741" timestamp="1577621269923" />
+  </component>
+</project>
