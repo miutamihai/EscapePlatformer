@@ -53,11 +53,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CoinScript.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\CameraMove.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\Mantle.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\Paralax.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\Player.cs" />
      <Compile Include="Assets\Flat Platformer Template\Scripts\WindMill.cs" />
+     <Compile Include="Assets\SwordScript.cs" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>/home/mihai/PlatformerTest/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
