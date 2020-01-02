@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SwordScript : MonoBehaviour {
 	public GameObject explosion;
-	public GameObject bandit;
+    private List<string> destroyables;
 
 	private void EliminateObject(GameObject gameobject, Collider2D collision){
 		GameObject e = Instantiate(gameobject) as GameObject;
@@ -12,16 +12,19 @@ public class SwordScript : MonoBehaviour {
 		Destroy(collision.gameObject);
 	}
 
-	private void OnTriggerEnter2D(Collider2D collision){
-		switch(collision.name){
-			case "Coin":
-					Debug.Log("Coin Collected");
-					EliminateObject(explosion, collision);
-					break;
-			//case "HeavyBandit":
-				//	Debug.Log("Enemy Killed");
-				//	EliminateObject(explosion, collision);
-				//break;
-		}
-	}
+    void Start()
+    {
+        destroyables = new List<string>();
+        destroyables.Add("Coin");
+        destroyables.Add("HeavyBandit");
+        destroyables.Add("LightBandit");
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision){
+        if(destroyables.Exists(x => x == collision.name))
+        {
+            Debug.Log("Target Destroyed");
+            EliminateObject(explosion, collision);
+        }
+    }
 }

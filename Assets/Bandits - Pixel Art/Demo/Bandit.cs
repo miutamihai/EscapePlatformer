@@ -12,20 +12,43 @@ public class Bandit : MonoBehaviour {
     private bool                m_grounded = false;
     private bool                m_combatIdle = false;
     private bool                m_isDead = false;
+    private GameObject player;
+    public GameObject explosion;
 
 
     public float speed;
     private float auxSpeed;
     private bool movingRight = false;
     private bool attacking = false;
+    private bool hasAttacked = false;
     public Transform groundDetection;
     public Transform playeDetection;
     // Use this for initialization
+
+    private void KillPlayer()
+    {
+        GameObject e = Instantiate(explosion) as GameObject;
+        e.transform.position = player.transform.position;
+        Destroy(player);
+    }
+
     void Start () {
         m_animator = GetComponent<Animator>();
         m_body2d = GetComponent<Rigidbody2D>();
         m_groundSensor = transform.Find("GroundSensor").GetComponent<Sensor_Bandit>();
         auxSpeed = speed;
+        player = GameObject.Find("Knight");
+    }
+
+    bool AnimatorIsPlaying()
+    {
+        return m_animator.GetCurrentAnimatorStateInfo(0).length >
+               m_animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+    }
+
+    bool AnimatorIsPlaying(string stateName)
+    {
+        return AnimatorIsPlaying() && m_animator.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,8 +65,7 @@ public class Bandit : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         //Check if character just landed on the ground
-        if (!m_isDead)
-        {
+
             attacking = false;
             RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, (float)0.08);
             RaycastHit2D playerInMeleeRange = Physics2D.Raycast(playeDetection.position, Vector2.left, (float)0.5);
@@ -52,28 +74,39 @@ public class Bandit : MonoBehaviour {
             {
                 Debug.Log("Player spotted");
                 attacking = true;
-                speed = 0;
-            }
-            if(attacking)
-                m_animator.SetTrigger("Attack");
-            if (!attacking)
+                if(!hasAttacked)
+                    m_animator.Play("Attack");
+            if (!AnimatorIsPlaying("Attack"))
             {
-                m_animator.SetInteger("AnimState", 2);
-                speed = auxSpeed;
-                if (groundInfo.collider == false)
+                KillPlayer();
+                Debug.Log("Player Hit");
+            }
+            
+            //m_animator.ResetTrigger("Attack");
+            speed = 0;
+        }
+        if (attacking) { }
+
+        if (!attacking)
+        {
+
+            hasAttacked = false;
+            m_animator.SetInteger("AnimState", 2);
+            speed = auxSpeed;
+            if (groundInfo.collider == false)
+            {
+                if (movingRight == true)
                 {
-                    if (movingRight == true)
-                    {
-                        transform.eulerAngles = new Vector3(0, -180, 0);
-                        movingRight = false;
-                    }
-                    else
-                    {
-                        transform.eulerAngles = new Vector3(0, 0, 0);
-                        movingRight = true;
-                    }
+                    transform.eulerAngles = new Vector3(0, -180, 0);
+                    movingRight = false;
+                }
+                else
+                {
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    movingRight = true;
                 }
             }
+
 
             if (!m_grounded && m_groundSensor.State())
             {
