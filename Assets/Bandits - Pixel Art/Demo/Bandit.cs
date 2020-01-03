@@ -56,8 +56,6 @@ public class Bandit : MonoBehaviour {
         if (collision.name == "Blade")
         {
             Debug.Log("Enemy Killed");
-            m_animator.SetTrigger("Hurt");
-            m_animator.SetTrigger("Death");
             m_isDead = true;
         }
     }

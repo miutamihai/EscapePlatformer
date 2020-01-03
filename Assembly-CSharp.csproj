@@ -68,6 +68,7 @@
     <Compile Include="Assets\Flat Platformer Template\Scripts\Paralax.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Player.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\WindMill.cs" />
+    <Compile Include="Assets\movingPlatform.cs" />
     <Compile Include="Assets\SwordScript.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <Reference Include="UnityEditor.StandardEvents">

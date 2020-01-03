@@ -18,10 +18,11 @@ public class SwordScript : MonoBehaviour {
         destroyables.Add("Coin");
         destroyables.Add("HeavyBandit");
         destroyables.Add("LightBandit");
+        destroyables.Add("Enemy");
     }
 
     private void OnTriggerEnter2D(Collider2D collision){
-        if(destroyables.Exists(x => x == collision.name))
+        if(destroyables.Exists(x => x == collision.name) || destroyables.Exists(x => x == collision.tag))
         {
             Debug.Log("Target Destroyed");
             EliminateObject(explosion, collision);
