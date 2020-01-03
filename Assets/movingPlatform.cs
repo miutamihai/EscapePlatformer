@@ -16,7 +16,7 @@ public class movingPlatform : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Translate((movingRight ? Vector2.right : Vector2.left) * speed * Time.deltaTime);
+        transform.Translate((movingRight ? Vector2.right : Vector2.left) * (speed * Time.deltaTime));
         variation -= Time.deltaTime;
         if (variation <= 0)
         {

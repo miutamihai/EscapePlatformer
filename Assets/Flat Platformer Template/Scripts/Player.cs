@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour {
@@ -12,7 +13,8 @@ public class Player : MonoBehaviour {
     public Transform _Blade, _GroundCast;
     public Camera cam;
     public bool mirror;
-
+    public GameObject explosion;
+    private GameObject player;
 
     private bool _canJump, _canWalk;
     private bool _isWalk, _isJump;
@@ -21,10 +23,32 @@ public class Player : MonoBehaviour {
     private Vector2 _inputAxis;
     private RaycastHit2D _hit;
 
-	void Start ()
+    private void RestartScene()
+    {
+        Debug.Log("restarting scene");   
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void KillPlayer()
+    {
+        GameObject e = Instantiate(explosion) as GameObject;
+        e.transform.position = player.transform.position;
+        Destroy(player);
+        Invoke("RestartScene", 2);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        //Debug.Log("thorns hit");
+        //if (collision.name.Contains("thorns"))
+         //   KillPlayer();
+    }
+
+    void Start ()
     {
         rig = gameObject.GetComponent<Rigidbody2D>();
         _startScale = transform.localScale.x;
+        player = GameObject.Find("Knight");
 	}
 
     void Update()

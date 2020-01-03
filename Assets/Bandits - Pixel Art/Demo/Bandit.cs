@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class Bandit : MonoBehaviour {
@@ -24,12 +25,17 @@ public class Bandit : MonoBehaviour {
     public Transform groundDetection;
     public Transform playeDetection;
     // Use this for initialization
+    private void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
     private void KillPlayer()
     {
         GameObject e = Instantiate(explosion) as GameObject;
         e.transform.position = player.transform.position;
         Destroy(player);
+        Invoke("RestartScene", 2);
     }
 
     void Start () {
@@ -67,7 +73,7 @@ public class Bandit : MonoBehaviour {
             attacking = false;
             RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, (float)0.08);
             RaycastHit2D playerInMeleeRange = Physics2D.Raycast(playeDetection.position, Vector2.left, (float)0.5);
-            transform.Translate(Vector2.left * speed * Time.deltaTime);
+            transform.Translate(Vector2.left * (speed * Time.deltaTime));
             if (playerInMeleeRange.collider == true)
             {
                 Debug.Log("Player spotted");
