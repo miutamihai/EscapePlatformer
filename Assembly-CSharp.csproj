@@ -62,13 +62,16 @@
     <Compile Include="Assets\Bandits - Pixel Art\Demo\Bandit.cs" />
     <Compile Include="Assets\Bandits - Pixel Art\Demo\CharacterSelector_Bandit.cs" />
     <Compile Include="Assets\Bandits - Pixel Art\Demo\Sensor_Bandit.cs" />
+    <Compile Include="Assets\BlinkingText.cs" />
     <Compile Include="Assets\CoinScript.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\CameraMove.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Mantle.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Paralax.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\Player.cs" />
     <Compile Include="Assets\Flat Platformer Template\Scripts\WindMill.cs" />
+    <Compile Include="Assets\KeepAudioPlaying.cs" />
     <Compile Include="Assets\movingPlatform.cs" />
+    <Compile Include="Assets\RestartGame.cs" />
     <Compile Include="Assets\SwordScript.cs" />
     <Compile Include="Assets\thorn.cs" />
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

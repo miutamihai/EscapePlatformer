@@ -1,15 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SwordScript : MonoBehaviour {
 	public GameObject explosion;
     private List<string> destroyables;
 
+    void LoadWinScene()
+    {
+        SceneManager.LoadScene("WinScene");
+    }
+
 	private void EliminateObject(GameObject gameobject, Collider2D collision){
 		GameObject e = Instantiate(gameobject) as GameObject;
 		e.transform.position = collision.transform.position;
 		Destroy(collision.gameObject);
+        if (collision.name == "Coin")
+            Invoke("LoadWinScene", 2);
 	}
 
     void Start()

@@ -10,7 +10,7 @@ public class thorn : MonoBehaviour {
 	private GameObject player;
 	private void RestartScene()
 	{
-		Debug.Log("restarting scene");   
+		Debug.Log("restarting scene");
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
