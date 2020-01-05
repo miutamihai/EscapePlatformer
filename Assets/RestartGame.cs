@@ -9,6 +9,7 @@ public class RestartGame : MonoBehaviour {
 	{
 		if (Input.anyKey)
 		{
+			//This only loads the main scene from the 'You Won' screen
 			SceneManager.LoadScene("MainScene");
 		}
 	}

@@ -18,6 +18,7 @@ public class BlinkingText : MonoBehaviour {
 
 	private void Update()
 	{
+		//This function loads the main scene on pressing any key
 		if (Input.anyKey)
 		{
 			SceneManager.LoadScene("MainScene");
@@ -32,7 +33,7 @@ public class BlinkingText : MonoBehaviour {
 			flashingText.text= "";
 			//display blank text for 0.5 seconds
 			yield return new WaitForSeconds(.5f);
-			//display “I AM FLASHING TEXT” for the next 0.5 seconds
+			//display “Press any key to Play” for the next 0.5 seconds
 			flashingText.text= "Press any key to Play";
 			yield return new WaitForSeconds(.5f);
 		}
